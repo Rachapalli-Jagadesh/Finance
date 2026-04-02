@@ -1,0 +1,29 @@
+{
+  "name": "finance-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "description": "Finance Data Processing and Access Control Backend — Zorvyn Internship Assignment",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "seed": "node src/seed.js",
+    "test": "node tests/run.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.2",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "knex": "^3.2.8",
+    "morgan": "^1.10.1",
+    "sql.js": "^1.14.1",
+    "uuid": "^13.0.0"
+  }
+}
