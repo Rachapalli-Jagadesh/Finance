@@ -271,7 +271,6 @@ Use the token as: `Authorization: Bearer <token>`
 | 429    | Rate limit exceeded        |
 | 500    | Internal server error      |
 
----
 
 ## Assumptions & Design Decisions
 
@@ -289,25 +288,4 @@ Use the token as: `Authorization: Bearer <token>`
 
 7. **Amount validation** — Amounts must be positive floats. The `type` field (income/expense) carries the sign semantics.
 
----
 
-## Running Example Requests (curl)
-
-```bash
-# Login
-curl -X POST http://localhost:3000/api/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"admin@finance.dev","password":"Admin@1234"}'
-
-# List records (replace TOKEN)
-curl http://localhost:3000/api/records?type=income \
-  -H "Authorization: Bearer TOKEN"
-
-# Dashboard summary
-curl http://localhost:3000/api/dashboard/summary \
-  -H "Authorization: Bearer TOKEN"
-
-# Insights (analyst/admin only)
-curl http://localhost:3000/api/dashboard/insights \
-  -H "Authorization: Bearer TOKEN"
-```
